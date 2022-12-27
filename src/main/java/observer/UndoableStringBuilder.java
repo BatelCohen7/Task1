@@ -118,7 +118,7 @@ public class UndoableStringBuilder {
             }
         }
 
-        public String toString() {
+    public String toString() {
             return getLastItem().toString();
         }
     }
