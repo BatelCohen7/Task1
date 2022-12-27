@@ -1,6 +1,6 @@
 # **Task1 - "Group Admin and Member Management"**
 This project contains classes and test classes for managing groups and their members.
-*created by : Batel Cohen & Tal Sahar*
+ *created by : Batel Cohen & Tal Sahar*
 
 In this project we extended the functionality of UndoableStringBuilder.
 We added an option to organize a group of recipients of updates on the status UndoableStringBuilder and send all updates to it in real time.
@@ -27,5 +27,5 @@ Finally, to ensure correctness for all the methods we built, we created for each
 To run the tests, use a test runner or testing framework of your choice. For example, you can use the junit library in a Java project by including it as a dependency in your project and running the tests using the JUnitCore class.
 
 ## **Questions**
-If you have any questions about this project, please open an issue or contact me at my email address: [BatelCohen96@gmail.com]
+If you have any questions about this project, please open an issue or contact me at my email address: BatelCohen96@gmail.com
 
