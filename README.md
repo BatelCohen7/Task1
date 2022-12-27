@@ -1,6 +1,6 @@
 # **Task1 - "Group Admin and Member Management"**
 This project contains classes and test classes for managing groups and their members.
- *created by : Batel Cohen & Tal Sahar*
+  *created by : Batel Cohen & Tal Sahar*
 
 In this project we extended the functionality of UndoableStringBuilder.
 We added an option to organize a group of recipients of updates on the status UndoableStringBuilder and send all updates to it in real time.
