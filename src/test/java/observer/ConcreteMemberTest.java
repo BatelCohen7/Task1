@@ -20,5 +20,10 @@ class ConcreteMemberTest {
         usb.append("Hello");
         member.update(usb);
         assertEquals("Hello", member.copy.getLastItem().toString());
+
+        UndoableStringBuilder newUsb = new UndoableStringBuilder(null) ;
+        newUsb.append("Undoable String builder has been updated");
+        member.update(newUsb);
+        assertEquals("Undoable String builder has been updated", member.copy.getLastItem().toString());
     }
 }

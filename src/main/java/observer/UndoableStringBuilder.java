@@ -7,7 +7,7 @@ Use the class you've implemented in previous assignment
  */
 
 public class UndoableStringBuilder {
-    private  ArrayList<java.lang.StringBuilder> list = new ArrayList<java.lang.StringBuilder>();
+    private  ArrayList<StringBuilder> list ;
     private int tempOffset = 0;
     public ArrayList<StringBuilder> getList() {
         return list;
@@ -17,6 +17,18 @@ public class UndoableStringBuilder {
         return tempOffset;
     }
 
+    /**
+     * Constructor with no list provided, will be used by the GroupAdmin to make the original Object.
+     */
+    public UndoableStringBuilder() {
+        this.list = new ArrayList<>();
+        this.list.add(new StringBuilder()) ;
+    }
+
+    /**
+     * Constructor with a list provided, will be used by ConcreteMember to make a copy of the original object.
+     * @param list - a list of StringBuilders
+     */
     public UndoableStringBuilder(ArrayList<java.lang.StringBuilder> list) {
         this.list = list;
     }
@@ -42,8 +54,8 @@ public class UndoableStringBuilder {
          * at the specified start and extends to the character at index
          * end - 1 or to the end of the sequence if no such character exists.
          * If start is equal to end, no changes are made.
-         * @param -The beginning index, inclusive
-         * @param -The ending index, exclusive.
+         * @param start - The beginning index, inclusive
+         * @param end - The ending index, exclusive.
          */
         public void delete(int start, int end) {
             try {
@@ -117,6 +129,11 @@ public class UndoableStringBuilder {
                 throw new IndexOutOfBoundsException("Error: cannot undo to empty list.");
             }
         }
+
+
+    public void setList(ArrayList<StringBuilder> list) {
+        this.list = list;
+    }
 
     public String toString() {
             return getLastItem().toString();

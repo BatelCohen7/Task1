@@ -8,6 +8,10 @@ public class GroupAdmin implements Sender {
 
     private UndoableStringBuilder status;
 
+    public GroupAdmin(){
+        status = new UndoableStringBuilder() ;
+    }
+
     /**
      * The register function add a member to the observers list.
      * @param obj - the object to register and such that implements the Member interface.
@@ -53,8 +57,8 @@ public class GroupAdmin implements Sender {
      * end - 1 or to the end of the sequence if no such character exists.
      * If start is equal to end, no changes are made.
      * In addition, notifies all the observers change has been made.
-     * @param -The beginning index, inclusive
-     * @param -The ending index, exclusive.
+     * @param start - The beginning index, inclusive
+     * @param end - The ending index, exclusive.
      */
     @Override
     public void delete(int start, int end) {
@@ -86,6 +90,13 @@ public class GroupAdmin implements Sender {
         }
     }
 
+    public UndoableStringBuilder getStatus() {
+        return status;
+    }
+
+    public void setStatus(UndoableStringBuilder status) {
+        this.status = status;
+    }
 
     public String toString() {
         return observers.toString();
